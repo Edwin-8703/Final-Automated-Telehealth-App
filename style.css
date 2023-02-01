@@ -135,5 +135,8 @@ ul li a:hover{
 	margin-top: 0px;
 }
 
-
+.jumbotron .container .row .col-md-4 a{
+	background-color: blueviolet;
+	border-radius: 40px;
+}
 
