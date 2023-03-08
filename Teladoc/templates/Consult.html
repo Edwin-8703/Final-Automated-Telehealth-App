@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='DoctorsProfile.css') }}">
+</head>
+<style>
+
+    .img_holder img{
+        max-width: 100%; max-height: 100%;
+    }
+
+    .btn-file {
+    position: relative;
+    overflow: hidden;
+    }
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+</style>
+<body>
+     <header>
+       <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:steelblue;">
+
+                <a class="navbar-brand" href="#"><img src="{{url_for('static', filename='logo.jfif')}}" class="logo" width="120px" height="60px"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse" style="font-size: 15px; font-weight: bold;">
+                    <ul class="navbar-nav ml-auto" >
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Get Started</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">|</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+
+</header>
+<br>
+<section class="review" id="review">
+    
+    <h1 class="heading" style="text-align: center;"> Doctor's <span>Consultation</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="{{url_for('static', filename='phone.png')}}" alt=" ">
+          
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text1"><br><br>We are at your service . you can contact us through a phone call. Dial 0796299668 in your phone for any inquiry</p>
+            <div class="btn">
+             <a href="contact">Contact Us</a>
+         </div>
+        </div>
+
+        <div class="box">
+            <img src="{{url_for('static', filename='message1.png')}}" alt=" ">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">To reach us through messaging , we also offer a convinient way by just clickuing the button bellow.</p>
+            <div class="btn">
+             <a href="/message">Messaging</a>
+         </div>
+        </div>
+
+        <div class="box">
+            <img src="{{url_for('static', filename='video1.png')}}" alt=" ">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">Do you want to reach us through video call? Yes we are available all the time, you can click the button below to reach our doctor</p>
+            <div class="btn">
+            <a href="home">Video Conferencing</a>
+        </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- custom js file link  -->
+<script src= "{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
